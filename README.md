@@ -9,6 +9,8 @@ Optionally one can put the project into a namespace (i.e. group) from gitlab. Ju
 of the group as `NAMESPACE` parameter to the tool.
 
 
+\* We don't go to 25.12.01.52
+
 ## Usage
 
 ```
@@ -16,5 +18,19 @@ python repo_maker.py -h
 usage: repo_maker.py [-h] [-n NAMESPACE] GROUPS TEAMS
 ```
 
+## Authentication
 
-\* We don't go to 25.12.01.52
+This tool uses token authentication. Set up an api token for your gitlab account and export it as
+`gl_token` in your shell before running the tool.
+
+```
+export gl_token=FFFACAB666
+python repo-manager 15 7
+```
+
+A `token` file is ignored in `.gitignore` for convenience. You can store the token there.
+
+```
+export gl_token=`cat token`
+python repo-manager 15 7
+```
