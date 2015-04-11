@@ -35,7 +35,7 @@ def main(args):
     num_teams = int(args.num_teams)
     namespace = args.namespace
 
-    git = Gitlab("https://git.hhu.de", token=ENV["gl_token"])
+    git = Gitlab(args.host, token=ENV["gl_token"])
 
     for group in range(1, num_groups + 1):
         for team in range(1, num_teams + 1):
@@ -44,6 +44,8 @@ def main(args):
 if __name__ == "__main__":
     parser = ArgumentParser(
         description="cr3473 pr0pr4 r3p05 w17h l337 numb3r1n6")
+    parser.add_argument("host", metavar="HOST",
+                        help="The server where gitlab is hosted")
     parser.add_argument("num_groups", metavar="GROUPS",
                         help="Number of groups per week")
     parser.add_argument("num_teams", metavar="TEAMS",
