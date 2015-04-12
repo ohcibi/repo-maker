@@ -9,7 +9,7 @@ Optionally one can put the project into a namespace (i.e. group) from gitlab. Ju
 of the group as `NAMESPACE` parameter to the tool.
 
 
-\* We don't go to 25.12.01.52
+\* [We don't go to 25.12.01.52](http://wedontgoto25120152.de)
 
 ## Usage
 
